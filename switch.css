@@ -1,0 +1,41 @@
+
+.toggle { 
+        position : relative ; 
+        display : inline-block; 
+        width : 100px; 
+        height : 52px; 
+        background-color: gray; 
+        border-radius: 30px; 
+        border: 2px solid gray; 
+    } 
+            
+    /* After slide changes */
+    .toggle:after { 
+        content: ''; 
+        position: absolute; 
+        width: 50px; 
+        height: 50px; 
+        border-radius: 50%; 
+        background-color: white; 
+        margin-top: -50px;  
+        margin-left: 1px; 
+        transition:all 0.5s; 
+    } 
+    /*text displayed on AND off*/
+    p{
+        font-weight:bold;
+    }      
+    /* Checkbox checked changes */
+    .checkbox:checked + .toggle:after { 
+        margin-left : 49px;  
+    } 
+            
+    /* Checkbox checked change in background color of toggle l */
+    .checkbox:checked + .toggle { 
+        background-color: #74DF00; 
+    } 
+            
+    /* Checkbox vanished */
+    .checkbox {  
+        display : none; 
+    } 
